@@ -41,6 +41,7 @@
             android:ems="10"
             android:minHeight="48dp"
             android:textSize="16sp"
+            android:text="@{shoeData.name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/shoe_listing_name_label"
@@ -69,6 +70,7 @@
             android:ems="10"
             android:minHeight="48dp"
             android:textSize="16sp"
+            android:text="@{shoeData.company}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/shoe_listing_company_label"
@@ -96,6 +98,7 @@
             android:ems="10"
             android:minHeight="48dp"
             android:textSize="16sp"
+            android:text="@={`` + shoeData.size}"
             app:layout_constraintStart_toEndOf="@+id/shoe_listing_size_label"
             app:layout_constraintTop_toBottomOf="@+id/shoe_listing_company" />
 
@@ -123,6 +126,7 @@
             android:ems="10"
             android:minHeight="48dp"
             android:textSize="16sp"
+            android:text="@{shoeData.description}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

@@ -34,27 +34,24 @@ class ShoeDetailFragment : Fragment() {
 
         viewModel.cancelState.observe(viewLifecycleOwner, Observer { cancelState ->
             if (cancelState) {
-                val action = ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment()
-                findNavController().navigate(action)
+                navigateToShoeListFragment()
                 viewModel.onCancelComplete()
             }
         })
 
         viewModel.saveShoe.observe(viewLifecycleOwner, Observer { save ->
             if (save) {
-                val name = activity?.findViewById<EditText>(R.id.shoe_name_input)
-                val company = activity?.findViewById<EditText>(R.id.shoe_company_input)
-                val size = activity?.findViewById<EditText>(R.id.shoe_size_input)
-                val description = activity?.findViewById<EditText>(R.id.shoe_description_input)
-                viewModel.createShoe(name?.text.toString(), company?.text.toString(), size?.text.toString().toDouble(), description?.text.toString())
-
-                val action = ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment()
-                findNavController().navigate(action)
+                navigateToShoeListFragment()
                 viewModel.onSaveComplete()
             }
         })
 
         return binding.root
+    }
+
+    private fun navigateToShoeListFragment() {
+        val action = ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment()
+        findNavController().navigate(action)
     }
 
 }

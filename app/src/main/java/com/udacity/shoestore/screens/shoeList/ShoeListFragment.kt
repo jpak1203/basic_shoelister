@@ -29,12 +29,7 @@ class ShoeListFragment : Fragment() {
         viewModel.shoeList.observe(viewLifecycleOwner, Observer {
             viewModel.shoeList.value?.forEach { shoe ->
                 val shoeBinding = ShoeListingBinding.inflate(layoutInflater)
-
-                shoeBinding.shoeListingName.text = shoe.name
-                shoeBinding.shoeListingCompany.text = shoe.company
-                shoeBinding.shoeListingSize.text = shoe.size.toString()
-                shoeBinding.shoeListingDescription.text = shoe.description
-
+                shoeBinding.shoeData = shoe
                 binding.shoelistInnerLayout.addView(shoeBinding.root)
 
             }

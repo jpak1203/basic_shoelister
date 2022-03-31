@@ -45,7 +45,8 @@ class ShoesViewModel :  ViewModel() {
         _shoeList.value?.add(Shoe(name, company, size, description))
     }
 
-    fun onSave() {
+    fun onSave(name: String, company: String, size: Double, description: String) {
+        createShoe(name, company, size, description)
         _saveShoe.value = true
     }
 
