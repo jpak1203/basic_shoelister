@@ -9,6 +9,9 @@
             type="com.udacity.shoestore.models.ShoesViewModel" />
     </data>
 
+    <!-- I used ConstraintLayout here to anchor the ScrollView to the top, right, and left.
+    This was because I wanted only a small margin on the left and top so that it was easier to read -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoelist_layout"
         android:layout_width="match_parent"
@@ -24,6 +27,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
+            <!-- I used LinearLayout here since each shoe listing can lie on top of each other. There was no advanced constraints needed -->
 
             <LinearLayout
                 android:id="@+id/shoelist_inner_layout"

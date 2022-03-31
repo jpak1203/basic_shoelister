@@ -11,6 +11,9 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!-- I used ConstraintLayout here for reasons similar to fragment_login.
+    Each input needed a label so it made sense to have an anchor for each label to its input counterpart -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoe_detail_layout"
         android:layout_width="match_parent"

@@ -8,6 +8,10 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!-- I used ConstraintLayout here due to reasons similar to fragment_shoe_detail.
+    This is actually almost an exact copy of fragment_shoe_detail, but I used TextViews instead of EditTexts.
+    Each label was tied to its shoe detail counterpart. -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoe_listing_layout"
         android:layout_width="match_parent"

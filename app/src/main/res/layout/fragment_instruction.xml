@@ -9,6 +9,10 @@
             type="com.udacity.shoestore.screens.instruction.InstructionViewModel" />
     </data>
 
+    <!-- I used LinearLayout here because each component can lie on top of each other.
+    There is no advanced constraints needed. I was debating to use ConstraintLayout to keep the Button component on the bottom
+    but I think the design is simple enough to use LinearLayout. -->
+
     <LinearLayout
         android:id="@+id/instruction_screen_layout"
         android:layout_width="match_parent"

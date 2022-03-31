@@ -10,6 +10,10 @@
             type="com.udacity.shoestore.screens.login.LoginViewModel" />
     </data>
 
+    <!-- I used ConstraintLayout here due to the labels that are need for each input.
+    It was easier to organize the components so that each label was anchored to its input counterpart.
+    And organizing it as "packed" with a small margin between the label and input made it very
+    coherent that the input was for "email" or "password" -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_layout"

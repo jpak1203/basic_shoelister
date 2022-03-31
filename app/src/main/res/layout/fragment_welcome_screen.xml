@@ -9,6 +9,10 @@
             type="com.udacity.shoestore.screens.welcome.WelcomeScreenViewModel" />
     </data>
 
+    <!-- I used LinearLayout here similar to the reasons of fragment_instruction.
+    There is no advanced constraints needed. I was debating to use ConstraintLayout to keep the Button component on the bottom
+    but I think the design is simple enough to use LinearLayout. -->
+
     <LinearLayout
         android:id="@+id/welcome_screen_layout"
         android:layout_width="match_parent"
